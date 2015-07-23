@@ -61,5 +61,5 @@ function display_sidebar() {
     $display = apply_filters('sage/display_sidebar', $conditionalCheck->result);
   }
 
-  return $display;
+  //return $display;
 }

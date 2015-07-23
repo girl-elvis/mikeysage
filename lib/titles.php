@@ -18,6 +18,8 @@ function title() {
     return sprintf(__('Search Results for %s', 'sage'), get_search_query());
   } elseif (is_404()) {
     return __('Not Found', 'sage');
+  } elseif (is_front_page()){
+    
   } else {
     return get_the_title();
   }
