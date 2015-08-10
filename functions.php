@@ -32,10 +32,6 @@ unset($file, $filepath);
 
 
 // Add menu to home page
-
-
-
-
 function add_homemenu($content) {
 
   if(is_home() || is_front_page() ) {
@@ -59,6 +55,7 @@ add_filter('the_content', 'add_homemenu');
 
 add_filter('nav_menu_css_class' , 'special_nav_class' , 90 , 2);
 
+//add classes to menus
 function special_nav_class($classes, $item){
     $menu_locations = get_nav_menu_locations();
     if ( has_term($menu_locations['home-menu'], 'nav_menu', $item) ||  has_term($menu_locations['sitemap'], 'nav_menu', $item)  ) {
@@ -69,3 +66,21 @@ function special_nav_class($classes, $item){
      }
      return $classes;
 }
+
+// Add col to archive pages
+function iwc_postclass_grid( $class = '' ) {
+  if ( is_archive() ) {
+    $class[] = 'col-sm-3';
+  }
+  return $class;
+  }
+    
+add_filter('post_class', 'iwc_postclass_grid');  
+
+// REMOVE "CATEGORY" from archive titles
+add_filter( 'get_the_archive_title', function ( $title ) {
+    if( is_category() ) {
+        $title = single_cat_title( '', false );
+    }
+    return $title;
+});

@@ -1,0 +1,57 @@
+// Post Archive
+/* ARCHIVE */
+
+.page-title {
+
+}
+
+.archive .page-header {
+    border-bottom: none;
+    border-top: none;
+
+	h1{
+	@extend .col-sm-3;  /* makes it a block with col-sm-3 class */
+	height: 160px;
+    background: #cccc33;
+    color: white;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center; /* needed for auto wrapped text */
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+	}
+	h2 {
+     padding: 10px;
+	}
+	.entry-title a {
+   		color: white !important;
+		font-size: 20px;
+		font-weight: bold;
+		left: 30px;
+		line-height: 1.3em;
+		max-width: 80%;
+		position: absolute;
+		text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+		top: 20px;
+	}
+}
+.archive-meta {
+	height: 160px;
+    background: #f7f7f7;
+    color: #666;
+    font-size: 13px;
+    }
+    
+
+ 
+.archive article:first-of-type {clear: left;}
+
+
+
+// Single Post
