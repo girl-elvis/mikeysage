@@ -14,16 +14,8 @@
 	border:  3px solid black;
 	}
 	h1 { 
-	color: #fff;
-	font-weight: bold;
-	font-size: 30px;
-	width: 60%;
-	line-height: 1.3em;
-	text-shadow: /* pseudo outline */
-	   -2px -2px 0 #000,
-	   2px -2px 0 #000,
-	   -2px 2px 0 #000,
-	   2px 2px 0 #000; 
+	width: 60%;	
+	@include outlinefont(#fff, 30px)
  
        }
     aside {
@@ -36,11 +28,35 @@
     }   
 }
 
-#menu-home-page-menu {
+
+/* HOME PAGE ICON MENU */
+
+.home-menu ul {
 	padding-left: 0;
-	li { background-color: $art; border: 5px solid $pale;}
+	li { 
+		background-color: $art; border: 5px solid $pale;
+		height: 160px;
+		a {
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+			display:block;
+			font-size: 1.8em;
+			//border:  5px solid #f7f7f7;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-align-items: center;
+			align-items: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			height:100%;
+			width:  100%;
+			text-align: center; /* needed for auto wrapped text */
+
+		}
+	}
 	li:nth-child(2) { background-color: $consult;}
 	li:nth-child(3) { background-color: $academic;}
 	li:nth-child(4) { background-color: $other;}
+	
 }
-

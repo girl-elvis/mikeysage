@@ -1,9 +1,6 @@
 // Post Archive
 /* ARCHIVE */
 
-.page-title {
-
-}
 
 .archive .page-header {
     border-bottom: none;
@@ -50,7 +47,21 @@
     
 
  
-.archive article:first-of-type {clear: left;}
+.archive article{
+    &:first-of-type {clear: left;}
+    header{ 
+        position: absolute;
+        left: 20px;
+        max-width: 80%;
+        .entry-title a{
+            @include outlinefont(#fff, 20px)
+        }
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
 
 

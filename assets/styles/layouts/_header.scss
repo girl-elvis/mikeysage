@@ -1,3 +1,7 @@
+.banner {
+	border-bottom: 0;
+}
+
 .brand {
   max-width: 50%;
     margin: 15px 0 10px;
@@ -36,6 +40,8 @@
 		@include font-helv();
 		li a {
 			color: $dark;
+			font-size: 11px;
+			font-weight: 400;
 		}
 
 		li a[href*="urban-art-practice"]  {
@@ -69,7 +75,7 @@
 
 
 // Map style black numbers under nav
-#menu-main-nav li{
+.banner li{
 /*    counter-increment: menu-counter;*/
     list-style-type: none;
 
@@ -111,55 +117,4 @@
 body {
   counter-reset: menu-counter;
 }
-
-
-
-/* HOME PAGE ICON MENU */
-
-#menu-home-page-menu li {
-	height: 160px;
-}
-
-#menu-home-page-menu li a {
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-	display:block;
-	font-size: 1.8em;
-	//border:  5px solid #f7f7f7;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-align-items: center;
-	align-items: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	height:100%;
-	width:  100%;
-	text-align: center; /* needed for auto wrapped text */
-
-}
-// From Nathan 
-// #menu-home-page-menu li [href*="consultation"],
-// /*#menu-main-nav li [href*="consultation"],*/
-// #menu-item-31,
-// .offcanvas #site-navigation li a[href*="consultation"]  {
-// 	background: $consult;
-// }
-
-//  #menu-home-page-menu li [href*="academic"],
-//  #menu-main-nav li [href*="academic"]
-//  #menu-item-7,
-//  #menu-item-33,
-//  .offcanvas #site-navigation li a[href*="academic"]  {
-// 	background: #669933;
-// }
-
-// #menu-home-page-menu li [href*="other"],
-// #menu-main-nav li [href*="other"]
-// #menu-item-8,
-// #menu-item-34,
-// .offcanvas #site-navigation li a[href*="other"]  {
-// 	background: #cc9933;
-// }
-
 

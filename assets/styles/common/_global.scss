@@ -1,4 +1,4 @@
-
+// FONTS
 @font-face {
     font-family: 'liberation_sansbold';
     src: url('../fonts/liberationsans-bold-webfont.eot');
@@ -11,9 +11,6 @@
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'liberation_sansitalic';
@@ -28,9 +25,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'liberation_sansregular';
     src: url('../fonts/liberationsans-regular-webfont.eot');
@@ -43,6 +37,21 @@
     font-style: normal;
 
 }
+
+/* MIXINS  */
+@mixin outlinefont($color, $size){
+    color: $color;
+    font-weight: bold;
+    font-size: $size;
+    line-height: 1.3em;
+    text-shadow: /* pseudo outline */
+       -2px -2px 0 #000,
+       2px -2px 0 #000,
+       -2px 2px 0 #000,
+       2px 2px 0 #000; 
+}
+
+/* General global styles */
 
 html{
 	background:white;

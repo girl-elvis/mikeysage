@@ -36,7 +36,8 @@ function add_homemenu($content) {
 
   if(is_home() || is_front_page() ) {
     $content = '<div class="row"><div class="home-image col-sm-9" style="background:url(';
-    $content .= get_field('homepage_image');
+      $fthumb =wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+    $content .=  $fthumb[0];
     $content .= ' ) no-repeat; "><h1 style="color:';
     //$content .= get_field('homepage_image_text_colour'); 
     $content .= '">' . get_field('homepage_image_text');
@@ -44,7 +45,7 @@ function add_homemenu($content) {
     $content .= get_field('intro_text') . '</aside></div></div>';
     
     if (has_nav_menu('home-menu')) :
-      $content .= wp_nav_menu( array( 'theme_location' => 'home-menu', 'walker' => new wp_bootstrap_navwalker() ,  'echo'=> false) );
+      $content .= wp_nav_menu( array( 'theme_location' => 'home-menu', 'walker' => new wp_bootstrap_navwalker() ,  'echo'=> false, 'container_class' => 'home-menu row') );
     endif;
   }
 
