@@ -7,7 +7,7 @@
     margin: 15px 0 10px;
  
  }
- 
+ .navbar-brand {height: auto;}
 .navbar-default .navbar-brand{
 	font-size: 48px;
 	font-weight: 600;
@@ -27,7 +27,7 @@
 .navbar-default {// reset bootstrap ones using same class
     background-color: transparent;
     border-color: white;
-    
+    margin-bottom: 0;
 
     .navbar-brand{
     	color: $dark;

@@ -35,13 +35,13 @@ unset($file, $filepath);
 function add_homemenu($content) {
 
   if(is_home() || is_front_page() ) {
-    $content = '<div class="row"><div class="home-image col-sm-9" style="background:url(';
-      $fthumb =wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
-    $content .=  $fthumb[0];
-    $content .= ' ) no-repeat; "><h1 style="color:';
+    $content = '<div class="row"><div class="home-image col-sm-9" >';
+        $content .= '<h1 style="color:';
     //$content .= get_field('homepage_image_text_colour'); 
     $content .= '">' . get_field('homepage_image_text');
-    $content .= '</h1></div><div class="intro col-sm-3"><aside>';
+    $content .= '</h1>';
+    $content .=   get_the_post_thumbnail( $post_id = null, $size = 'full' );
+    $content .= '</div><div class="intro col-sm-3"><aside>';
     $content .= get_field('intro_text') . '</aside></div></div>';
     
     if (has_nav_menu('home-menu')) :

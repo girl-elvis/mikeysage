@@ -4,10 +4,10 @@ footer {
     color: black;
     font-size: 85%;
     text-shadow: none;
-    padding: 3px;
-    margin-top: 3em;
+    
     .container {
 		background: #f7f7f7;
+	
 	}
 	a {
 	    border-bottom: medium none;
@@ -23,8 +23,9 @@ footer {
     padding: 10px 0;
 	}
 
-	ul {
-
+	ul:first-child {
+	padding: 3px;
+	    margin-top: 3em;
 		& > li {
 			font-size: 18px;
 			display: inline-block;
@@ -34,6 +35,7 @@ footer {
 				width: 100%;
 				position: absolute;
 				content: "";
+				margin-left: -10px;
 			}
 
 			&:nth-child(odd)::before {

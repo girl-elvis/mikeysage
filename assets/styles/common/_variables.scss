@@ -17,7 +17,7 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 /* HOUSE COLORS */
-$brand-primary:         #27ae60;
+$brand-primary:         #cccc99;
 $dark: #333 ; //nearly black 
 $pale: #f7f7f7 ; //nearly white
 
@@ -30,6 +30,7 @@ $other: #cc9933;
 
 /* Change grid sizing to 960 */
 $grid-gutter-width:         20px !default;
+$half-gutter: $grid-gutter-width/2 ;
 
 // Small screen / tablet
 $container-tablet:             (920px + $grid-gutter-width) !default;

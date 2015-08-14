@@ -5,9 +5,10 @@
 .archive .page-header {
     border-bottom: none;
     border-top: none;
+    margin-top: 0;
 
 	h1{
-	@extend .col-sm-3;  /* makes it a block with col-sm-3 class */
+	//@extend .col-sm-3;  /* makes it a block with col-sm-3 class */
 	height: 160px;
     background: #cccc33;
     color: white;
@@ -24,7 +25,7 @@
     text-align: center;
 	}
 	h2 {
-     padding: 10px;
+     padding: $half-gutter;
 	}
 	.entry-title a {
    		color: white !important;
@@ -35,7 +36,7 @@
 		max-width: 80%;
 		position: absolute;
 		text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-		top: 20px;
+		top: $grid-gutter-width;
 	}
 }
 .archive-meta {
@@ -48,21 +49,30 @@
 
  
 .archive article{
+    
     &:first-of-type {clear: left;}
     header{ 
         position: absolute;
-        left: 20px;
+        left: $grid-gutter-width + $half-gutter;
         max-width: 80%;
         .entry-title a{
-            @include outlinefont(#fff, 20px)
+            @include outlinefont(#fff, $grid-gutter-width)
         }
     }
     img {
         max-width: 100%;
         height: auto;
     }
+    .entry-summary{
+       padding-left: $half-gutter;
+        padding-right: $half-gutter; 
+    }
 }
 
 
 
 // Single Post
+
+
+
+//.entry-thumb 

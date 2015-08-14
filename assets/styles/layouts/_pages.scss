@@ -3,27 +3,33 @@
  }
 
  // Homepage Layout and category menu thing
-
+.intro {    padding: 0 $half-gutter;
+}
 .home-image,
 .intro {
-	height:400px;
-	border: 5px solid $pale;
-	background: #cccc99;
+	height:390px;
+//	border: 5px solid $pale;
+//	background: #cccc99;
 
 	img {
-	border:  3px solid black;
+		max-width: 100%
 	}
 	h1 { 
-	width: 60%;	
-	@include outlinefont(#fff, 30px)
- 
-       }
+		width: 60%;	
+		@include outlinefont(#fff, 30px);
+		position: absolute;
+		left: $grid-gutter-width;
+	 }
     aside {
-    font-size: 12px;
+	    font-size: 12px;
+		background: $brand-primary;
+		height: 100%;
 	    &::before {
-		content:  url('dist/images/info-icon.png');
-		display: block;
-		margin: 12px 0 0;
+			content:  url('dist/images/info-icon.png');
+			display: block;
+		}
+		p{
+			padding: 0 $half-gutter;
 		}
     }   
 }
@@ -31,32 +37,39 @@
 
 /* HOME PAGE ICON MENU */
 
-.home-menu ul {
-	padding-left: 0;
-	li { 
-		background-color: $art; border: 5px solid $pale;
-		height: 160px;
-		a {
-			color: white;
-			text-decoration: none;
-			font-weight: bold;
-			display:block;
-			font-size: 1.8em;
-			//border:  5px solid #f7f7f7;
-			display: -webkit-flex;
-			display: flex;
-			-webkit-align-items: center;
-			align-items: center;
-			-webkit-justify-content: center;
-			justify-content: center;
-			height:100%;
-			width:  100%;
-			text-align: center; /* needed for auto wrapped text */
+.home-menu {
+	margin-top:$grid-gutter-width;
+	margin-bottom: $grid-gutter-width;
+	ul {
+		padding-left: 0;
+		li { 
+			
+			//border: 5px solid $pale;
+			height: 160px;
+			a {
+				background-color: $art; 
+				color: white;
+				text-decoration: none;
+				font-weight: bold;
+				display:block;
+				font-size: 1.8em;
+				//border:  5px solid #f7f7f7;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				height:100%;
+				width:  100%;
+				text-align: center; /* needed for auto wrapped text */
 
+			}
 		}
+		li:nth-child(2) a { background-color: $consult;}
+		li:nth-child(3) a { background-color: $academic;}
+		li:nth-child(4) a{ background-color: $other;}
 	}
-	li:nth-child(2) { background-color: $consult;}
-	li:nth-child(3) { background-color: $academic;}
-	li:nth-child(4) { background-color: $other;}
+	&::after {margin-bottom: 3em;}
 	
 }
