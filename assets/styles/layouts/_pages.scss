@@ -3,11 +3,13 @@
  }
 
  // Homepage Layout and category menu thing
+ .home .page-header {margin: 0;}
+ 
 .intro {    padding: 0 $half-gutter;
 }
 .home-image,
 .intro {
-	height:390px;
+	height:200px;
 //	border: 5px solid $pale;
 //	background: #cccc99;
 
@@ -15,10 +17,17 @@
 		max-width: 100%
 	}
 	h1 { 
-		width: 60%;	
-		@include outlinefont(#fff, 30px);
-		position: absolute;
+		width: 90%;	
+		@include outlinefont(#fff, 1.5em);
+		
 		left: $grid-gutter-width;
+	 }
+	 .rsSBlock{
+		position: absolute;
+		width: 100% !important;
+		height: 100% !important;
+		top: 0 !important;
+		left: 5% !important;
 	 }
     aside {
 	    font-size: 12px;

@@ -13,17 +13,20 @@
 	/* Small Devices, Tablets */
 	@media only screen and (min-width : 768px){
 
-	 .navbar-nav{
-	float: right;
-}
+		 .navbar-nav{
+			float: right;
+		}
  	}
+ 	
 	/* Medium Devices, Desktops */
 	@media only screen and (min-width : 992px){ 
 		.navbar-header {    
 			//max-width: 50%;
   		}
+		 .home-image, .intro {
+		    height: 390px;
+		}
 	}
- 
  
 	/* Large Devices, Wide Screens */
 	@media only screen and (min-width : 1200px){ }

@@ -3,12 +3,15 @@
 <div class="page-header">
 
 <?php 
-if ( is_category() ) {
+if(is_home() ){
+		$title = '<h1 class="offscreen">' .  Titles\title(). '</h1>';
+}else if ( is_category() ) {
 	$title = '<div class="col-sm-3"><h1>' .  Titles\title()  . '</h1></div>';
 } else{
-	$title = '<h1><?= Titles\title(); ?></h1>';
+	$title = '<h1>' .  Titles\title(). '</h1>';
 }
 echo $title;
+
   if ( $category_description = category_description() )
 			echo '<h2 class="archive-meta col-sm-9">' . $category_description . '</h2>';
 

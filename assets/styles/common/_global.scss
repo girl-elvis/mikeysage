@@ -59,6 +59,6 @@ html{
 	background: #333;
 	}
 }
-.container {background: $pale;}
+.container, .container-fluid{background: $pale;}
 
 img {max-width: 100%; height: auto;}

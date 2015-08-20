@@ -36,11 +36,7 @@ function add_homemenu($content) {
 
   if(is_home() || is_front_page() ) {
     $content = '<div class="row"><div class="home-image col-sm-9" >';
-        $content .= '<h1 style="color:';
-    //$content .= get_field('homepage_image_text_colour'); 
-    $content .= '">' . get_field('homepage_image_text');
-    $content .= '</h1>';
-    $content .=   get_the_post_thumbnail( $post_id = null, $size = 'full' );
+    $content .=   get_new_royalslider(1); 
     $content .= '</div><div class="intro col-sm-3"><aside>';
     $content .= get_field('intro_text') . '</aside></div></div>';
     

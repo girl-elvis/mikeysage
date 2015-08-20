@@ -42,20 +42,11 @@
 			color: $dark;
 			font-size: 11px;
 			font-weight: 400;
+			background-color: $consult;
 		}
-
-		li a[href*="urban-art-practice"]  {
-	background: $art;
-	}
-	li a[href*="consultation"]  {
-	background: $consult;
-	}
-	li a[href*="academic"]  {
-	background: $academic;
-	}
-	li a[href*="other"]  {
-	background: $other;
-	}
+		li:nth-child(2) a { background-color: $academic;}
+		li:nth-child(3) a { background-color: $art;}
+		li:nth-child(4) a{ background-color: $other;}
 
 		li a:hover {
 		background: silver;		
@@ -72,6 +63,7 @@
 
 	}
 }
+
 
 
 // Map style black numbers under nav
