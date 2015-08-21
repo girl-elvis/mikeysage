@@ -1,5 +1,6 @@
 .main {
 	padding: 0 $grid-gutter-width;
+	.row.homemain {display: flex;}
 }
 
 .page-header {
@@ -7,7 +8,10 @@
  }
 
  // Homepage Layout and category menu thing
- .home .page-header {margin: 0;}
+ .home .page-header {
+ 	margin: 0;
+ 	h1{margin-bottom: 0;}
+ }
  
 .intro {    padding: 0 $half-gutter;
 }
@@ -16,7 +20,7 @@
 //	height:200px;
 //	border: 5px solid $pale;
 //	background: #cccc99;
-
+display: flex;
 	img {
 		max-width: 100%
 	}
@@ -26,6 +30,7 @@
 		
 		left: $grid-gutter-width;
 	 }
+	 #new-royalslider-1{height: auto !important ;}
 	 .rsSBlock{
 		position: absolute;
 		width: 100% !important;

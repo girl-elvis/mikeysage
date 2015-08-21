@@ -56,7 +56,7 @@ class new_general_setting {
 function add_homemenu($content) {
 
   if(is_home() || is_front_page() ) {
-    $content = '<div class="row"><div class="home-image col-sm-9" >';
+    $content = '<div class="row homemain"><div class="home-image col-sm-9" >';
     $content .=   get_new_royalslider(1); 
     $content .= '</div><div class="intro col-sm-3"><aside>';
     $content .= get_field('intro_text') . '</aside></div></div>';

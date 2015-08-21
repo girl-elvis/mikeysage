@@ -1,7 +1,7 @@
 <?php 
 
 if(is_home() || is_front_page() ) {
-    $content = '<div class="row"><div class="home-image col-sm-9" >';
+    $content = '<div class="row homemain"><div class="home-image col-sm-9" >';
         $content .= '<h1>';
     
     $content .=  get_template_part('templates/carousel'); 
