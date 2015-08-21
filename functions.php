@@ -31,6 +31,27 @@ foreach ($sage_includes as $file) {
 unset($file, $filepath);
 
 
+//Add settings field to general settings.
+// add_settings_field( 'myprefix_setting-id', 'This is the setting title', 'myprefix_setting_callback_function', 'general', 'myprefix_settings-section-name', array( 'label_for' => 'myprefix_setting-id' ) );
+$tagline_setting = new new_general_setting();
+
+class new_general_setting {
+    function new_general_setting( ) {
+        add_filter( 'admin_init' , array( &$this , 'register_fields' ) );
+    }
+    function register_fields() {
+        register_setting( 'general', 'tagline2', 'esc_attr' );
+        add_settings_field('tagline2', '<label for="tagline2">'.__('Tagline 2' , 'tagline2' ).'</label>' , array(&$this, 'fields_html') , 'general' );
+    }
+    function fields_html() {
+        $value = get_option( 'tagline2', '' );
+        echo '<input type="text" id="tagline2" name="tagline2" value="' . $value . '" />';
+    }
+}
+
+
+
+
 // Add menu to home page
 function add_homemenu($content) {
 

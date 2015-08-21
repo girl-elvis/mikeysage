@@ -20,13 +20,17 @@
  	
 	/* Medium Devices, Desktops */
 	@media only screen and (min-width : 992px){ 
+		.container-fluid {max-width: 940px;}
 		.navbar-header {    
 			//max-width: 50%;
   		}
 		 .home-image, .intro {
-		    height: 390px;
+		   // height: 390px;
 		}
 	}
  
 	/* Large Devices, Wide Screens */
-	@media only screen and (min-width : 1200px){ }
+	@media only screen and (min-width : 1200px){ 
+		.container-fluid {max-width: 960px;}
+
+	}

@@ -62,3 +62,13 @@ html{
 .container, .container-fluid{background: $pale;}
 
 img {max-width: 100%; height: auto;}
+
+
+/* BS Carousel  */
+
+.carousel-inner img.attachment-slide{
+    margin: 0 auto;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    }
