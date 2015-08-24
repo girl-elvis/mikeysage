@@ -49,12 +49,14 @@
 
  
 .archive article{
-    
+    .entry-title {
+        margin-top: 0;
+    }
     &:first-of-type {clear: left;}
     header{ 
         position: absolute;
-        left: $grid-gutter-width + $half-gutter;
-        max-width: 80%;
+        left: $grid-gutter-width ;
+        max-width: 75%;
         .entry-title a{
             @include outlinefont(#fff, $grid-gutter-width)
         }
@@ -64,8 +66,9 @@
         height: auto;
     }
     .entry-summary{
-       padding-left: $half-gutter;
-        padding-right: $half-gutter; 
+       // padding-left: $half-gutter * 2;
+       //  padding-right: $half-gutter; 
+
     }
 }
 
