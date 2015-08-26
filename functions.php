@@ -62,11 +62,15 @@ function add_homemenu($content) {
     $content .= get_field('intro_text') . '</aside></div></div>';
     
     if (has_nav_menu('home-menu')) :
-      $content .= wp_nav_menu( array( 'theme_location' => 'home-menu', 'walker' => new wp_bootstrap_navwalker() ,  'echo'=> false, 'container_class' => 'home-menu row') );
+      $content .= "<div class='home-menu row'> ";
+      $content .= wp_nav_menu( array( 'theme_location' => 'home-menu',  'echo'=> false, 'container' => false ) );
+      $content .= "</div>";
     endif;
   }
 
   return $content;
+  echo wp_nav_menu( array( 'theme_location' => 'home-menu', 'walker' => new wp_bootstrap_navwalker() ,  'echo'=> false, 'container_class' => 'home-menu row') );
+    
 }
 add_filter('the_content', 'add_homemenu');
 

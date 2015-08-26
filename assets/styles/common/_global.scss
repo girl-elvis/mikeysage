@@ -41,13 +41,11 @@
 /* MIXINS  */
 @mixin outlinefont($color, $size){
     color: $color;
-    font-weight: bold;
+    //font-weight: bold;
     font-size: $size;
-    line-height: 1.3em;
+    line-height: 1.1;
     text-shadow: /* pseudo outline */
-       -2px -2px 0 #000,
-       2px -2px 0 #000,
-       -2px 2px 0 #000,
+       
        2px 2px 0 #000; 
 }
 
@@ -62,13 +60,46 @@ html{
 .container, .container-fluid{background: $pale;}
 
 img {max-width: 100%; height: auto;}
-
-
+.h1, h1 {font-size: 30px; }
+.h2, h2 {
+    font-size: 25px;
+}
+.h3, h3 {
+    font-size: 21px;
+}
 /* BS Carousel  */
 
-.carousel-inner img.attachment-slide{
-    margin: 0 auto;
+.carousel-inner {
+    img.attachment-slide{
+        margin: 0 auto;
+    }
+    h1{
+        font-size: 20px;
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
+        font-weight: normal;
+    }
+    .carousel-caption {
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        padding-bottom: 0px;
+        bottom: 0px;
+        background: rgba(0, 0, 0, 0.1) none repeat scroll 0% 0%;
+        padding-top: 1em;
+    }
 }
+
 .carousel-control.right, .carousel-control.left {
     background-image: none;
-    }
+    span {top: 50%;}
+}
+.carousel-indicators {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 5;
+    margin: 0px;
+    list-style: outside none none;
+    bottom: auto;
+}

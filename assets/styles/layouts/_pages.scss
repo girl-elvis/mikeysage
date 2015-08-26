@@ -65,7 +65,7 @@ display: flex;
 			//border: 5px solid $pale;
 			height: 160px;
 			a {
-				background-color: $art; 
+				background-color: $consult; 
 				color: white;
 				text-decoration: none;
 				font-weight: bold;
@@ -84,9 +84,9 @@ display: flex;
 
 			}
 		}
-		li:nth-child(2) a { background-color: $consult;}
-		li:nth-child(3) a { background-color: $academic;}
-		li:nth-child(4) a{ background-color: $other;}
+		li:nth-child(2) a { background-color: $academic;}
+		li:nth-child(3) a { background-color: $art;}
+		li:nth-child(4) a{ background-color: $maps;}
 	}
 	&::after {margin-bottom: 3em;}
 	

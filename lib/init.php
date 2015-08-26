@@ -32,7 +32,7 @@ function setup() {
   add_theme_support('post-thumbnails');
   
   set_post_thumbnail_size( 250, 160, true );
-add_image_size( 'slide', 600, 300, array( 'center', 'center' ) ); // Hard crop left top
+add_image_size( 'slide', 600, 300, array( 'center', 'center' ) ); // Hard crop middle centre
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats

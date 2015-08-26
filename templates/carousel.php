@@ -1,7 +1,7 @@
 <?php
 //echo "post is" . $post->ID ;
 
-$args = array( 'post_type' => 'attachment', 'posts_per_page' => -1, 'post_status' =>'any', 'post_parent' => $post->ID ); 
+$args = array( 'post_type' => 'attachment', 'posts_per_page' => -1, 'post_status' =>'any', 'post_parent' => $post->ID, 'orderby'=> 'menu_order', 'order'=> "ASC" ); 
 
 $attachments = get_posts( $args );
 
@@ -27,7 +27,11 @@ foreach ($sliderimages as $index => $slide) {
       echo " active"; //Make first slide "active"
  	}
 	echo " '>";
-	echo wp_get_attachment_image( $slide, 'slide' ) . "</div>" ;
+
+	echo wp_get_attachment_image( $slide, 'slide' ) ;
+    echo "<div class='container'><div class='carousel-caption'><h4>" ;
+    echo get_post_field('post_excerpt', $slide); // caption
+    echo "</h4><p class='lead'></p></div></div></div>" ;
 }
 ?>
 
@@ -53,8 +57,8 @@ foreach ($sliderimages as $index => $thumb) {
 	if ($index == 0) {
       echo "class='active'"; //Make first slide "active"
  	}
-	echo " >";
-	echo wp_get_attachment_image( $thumb, 'slidethumb' ) . "</li>" ;
+	echo " ></li>";
+	//echo wp_get_attachment_image( $thumb, 'slidethumb' ) . "" ;
 }
 ?>
 

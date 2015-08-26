@@ -28,14 +28,14 @@
      padding: $half-gutter;
 	}
 	.entry-title a {
-   		color: white !important;
-		font-size: 20px;
-		font-weight: bold;
+   		
+		
+	
 		left: 30px;
-		line-height: 1.3em;
+		@include outlinefont(#fff, 18px);
 		max-width: 80%;
 		position: absolute;
-		text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+		//text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 		top: $grid-gutter-width;
 	}
 }
@@ -51,6 +51,8 @@
 .archive article{
     .entry-title {
         margin-top: 0;
+        line-height: 0.9;
+background: rgba(0, 0, 0, 0.2) none repeat scroll 0% 0%;
     }
     &:first-of-type {clear: left;}
     header{ 
@@ -58,7 +60,7 @@
         left: $grid-gutter-width ;
         max-width: 75%;
         .entry-title a{
-            @include outlinefont(#fff, $grid-gutter-width)
+            @include outlinefont(#fff, 18px)
         }
     }
     img {
