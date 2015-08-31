@@ -53,9 +53,23 @@
 
 html{
 	background:white;
-	body{
-	background: #333;
-	}
+	
+}
+body{
+    background: transparent;
+    display: block;
+    position: relative;
+    &::before {
+      content: "";
+      background: url(../images/bg4.gif);
+      opacity: 0.4;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;   
+    }
 }
 .container, .container-fluid{background: $pale;}
 

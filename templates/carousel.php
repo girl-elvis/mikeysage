@@ -6,7 +6,8 @@ $args = array( 'post_type' => 'attachment', 'posts_per_page' => -1, 'post_status
 $attachments = get_posts( $args );
 
 if ( $attachments ) {
-	
+//$numslides = ( (count($attachments) > 0) ? TRUE : FALSE);
+if (count($attachments)>1) $numbslides = TRUE;	
 	foreach ( $attachments as $attachment ) {
 		$sliderimages[] = $attachment->ID;
 		
@@ -29,17 +30,28 @@ foreach ($sliderimages as $index => $slide) {
 	echo " '>";
 
 	echo wp_get_attachment_image( $slide, 'slide' ) ;
-    echo "<div class='container'><div class='carousel-caption'><h4>" ;
-    echo get_post_field('post_excerpt', $slide); // caption
-    echo "</h4><p class='lead'></p></div></div></div>" ;
+
+
+    echo "<div class='container'>";
+
+
+    $caption =get_post_field('post_excerpt', $slide);
+    if ($caption) {
+        echo "<div class='carousel-caption'><h4>" ;
+        echo $caption;
+        echo "</h4><p class='lead'></p></div>";
+    }
+
+    echo "</div></div>" ;
 }
 ?>
 
 
           
         </div>
-            
-        <!-- Controls -->
+    <?php if ($numbslides == TRUE){ ?>
+
+ <!-- Controls -->
         <a class='left carousel-control' href='#carousel-custom' data-slide='prev'>
             <span class='glyphicon glyphicon-arrow-left'></span>
         </a>
@@ -50,17 +62,24 @@ foreach ($sliderimages as $index => $slide) {
     
     <!-- Indicators -->
     <ol class='carousel-indicators mCustomScrollbar'>
-
 <?php
 foreach ($sliderimages as $index => $thumb) {
-	echo "<li data-target='#carousel-custom' data-slide-to='" . $index . "' " ;
-	if ($index == 0) {
+    echo "<li data-target='#carousel-custom' data-slide-to='" . $index . "' " ;
+    if ($index == 0) {
       echo "class='active'"; //Make first slide "active"
- 	}
-	echo " ></li>";
-	//echo wp_get_attachment_image( $thumb, 'slidethumb' ) . "" ;
+    }
+    echo " ></li>";
+    //echo wp_get_attachment_image( $thumb, 'slidethumb' ) . "" ;
 }
 ?>
 
     </ol>
+<?php 
+
+
+
+    } else { echo "</div>";} // end if $numslides      
+       
+?>
+
 </div>
