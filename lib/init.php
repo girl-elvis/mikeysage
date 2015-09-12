@@ -32,11 +32,11 @@ function setup() {
   add_theme_support('post-thumbnails');
   
   set_post_thumbnail_size( 250, 160, true );
-add_image_size( 'slide', 600, 300, array( 'center', 'center' ) ); // Hard crop middle centre
+add_image_size( 'slide', 450, 318, false ); // 
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
- // add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
+ add_theme_support('post-formats', [ 'video', 'audio']);
 
   // Add HTML5 markup for captions
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5

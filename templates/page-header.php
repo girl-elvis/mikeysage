@@ -16,7 +16,7 @@ if(is_home() ){
 echo '<div class="page-header' . $off . '">' . $title;
 
   if ( $category_description = category_description() )
-			echo '<h2 class="archive-meta col-sm-9">' . $category_description . '</h2>';
+			echo '<div class="archive-meta col-sm-9">' . $category_description . '</div>';
 
 ?>
 

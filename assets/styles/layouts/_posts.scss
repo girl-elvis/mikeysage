@@ -21,7 +21,7 @@
     text-align: center; /* needed for auto wrapped text */
     color: white;
     font-size: 1.5em;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
 	}
 	h2 {
@@ -44,6 +44,7 @@
     background: #f7f7f7;
     color: #666;
     font-size: 13px;
+    margin-top: $grid-gutter-width;
     }
     
 
@@ -59,6 +60,8 @@ background: rgba(0, 0, 0, 0.2) none repeat scroll 0% 0%;
         position: absolute;
         left: $grid-gutter-width ;
         max-width: 75%;
+        left: 10%;
+        bottom: 0;
         .entry-title a{
             @include outlinefont(#fff, 18px)
         }

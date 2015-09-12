@@ -6,7 +6,7 @@ $icon-font-path:        "../fonts/";
 @mixin font-helv() {
 	font-family: 'Helvetica Neue', Helvetica,'liberation_sansregular', Arial, sans-serif;
 	font-weight: 300;
-	font-kerning: normal;
+	// font-kerning: normal;
 }
 
 	
@@ -17,7 +17,7 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 /* HOUSE COLORS */
-$brand-primary:         #cccc99;
+$brand-primary:         rgb(119, 119, 56);
 $dark: #333 ; //nearly black 
 $pale: #f7f7f7 ; //nearly white
 

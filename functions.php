@@ -56,11 +56,21 @@ class new_general_setting {
 function add_homemenu($content) {
 
   if(is_home() || is_front_page() ) {
-    $content = '<div class="row homemain"><div class="home-image col-sm-9" >';
-    $content .=   get_new_royalslider(1); 
-    $content .= '</div><div class="intro col-sm-3"><aside>';
+    $content = '<div class="row homemain"> <div class="home-image col-sm-9" >';
+    //$content .=   get_new_royalslider(1); 
+            $content .= '<h1 style="color:';
+    //$content .= get_field('homepage_image_text_colour'); 
+    $content .= '">' . get_field('homepage_image_text');
+    $content .= '</h1>';
+    $content .=   get_the_post_thumbnail( $post_id = null, $size = 'full' );
+
+
+    $content .= '</div> <div class="intro col-sm-3"><aside>';
     $content .= get_field('intro_text') . '</aside></div></div>';
     
+    $content .= "<div class='blogdesc'>" . get_bloginfo('description') . "</div>" ;
+    $content .= "<div class='blogdesc'>" . get_option( 'tagline2' ) . "</div>" ;
+
     if (has_nav_menu('home-menu')) :
       $content .= "<div class='home-menu row'> ";
       $content .= wp_nav_menu( array( 'theme_location' => 'home-menu',  'echo'=> false, 'container' => false ) );
@@ -106,3 +116,28 @@ add_filter( 'get_the_archive_title', function ( $title ) {
     }
     return $title;
 });
+
+
+
+
+function remove_images(){
+    $posts = get_posts( array( 
+      'post_type'      => 'post', 
+      'posts_per_page' => 500, 
+      'offset'         => 0, 
+  ) );
+
+  foreach( $posts as $post ):
+      // Update each post with your reg-ex content filter:
+      $pid = wp_update_post( array( 
+          'ID'           => $post->ID,
+          'post_content' => preg_replace( "/<img[^>]+\>/i", "", $post->post_content, -1 )
+      ) );
+      // Show the update process:
+      printf( '<p>Post with ID: %d was %s updated</p>', 
+          $post->ID, 
+          ( 0 < $pid ) ? '' : 'NOT' 
+      );     
+  endforeach;
+}
+//add_action( 'after_setup_theme', 'remove_images' ); 

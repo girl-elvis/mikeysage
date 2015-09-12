@@ -24,7 +24,6 @@
       endif;
       ?>
     </nav>
- <div class='blogdesc'><?php bloginfo('description'); ?></div>
-        <div  class='blogdesc'><?php echo get_option( 'tagline2' ); ?> </div>
+
   </div>
 </header>

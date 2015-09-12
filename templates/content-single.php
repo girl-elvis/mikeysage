@@ -5,26 +5,22 @@
       <?php // get_template_part('templates/entry-meta'); ?>
     </header>
 
-    <div class="project-meta col-sm-6" >
-     <!--  <div class="entry-thumb"><?php the_post_thumbnail("large"); ?> </div> -->
 
-<?php  get_template_part('templates/carousel'); ?>
+<?php if (!has_post_format( 'video')){  
+        echo '<div class="project-meta col-sm-6" >';
+        get_template_part('templates/carousel'); 
+        echo '</div> <div class="entry-conten col-sm-6">';
 
-      <div class="row">
-<?php
-    
-    
-
-
-
+      } else {
+        echo '<div >';
+      }
 
 ?>
-</div>
-    </div>
-    <div class="entry-conten col-sm-6">
+    
       <?php the_content(); ?>
     </div>
     
+
     <div class="related col-sm-6"> <h2>More Projects here</h2>
           <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
