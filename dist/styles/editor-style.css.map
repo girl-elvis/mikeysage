@@ -1,1 +1,1 @@
-{"version":3,"sources":["editor-style.scss"],"names":[],"mappings":"AAEA,KACE,OAAA","file":"editor-style.css","sourceRoot":"assets/styles/","sourcesContent":["//@import \"main\";\n\nbody {\n  margin: 12px !important;\n}\n"]}
+{"version":3,"sources":["../stdin"],"names":[],"mappings":"AAEA,KACE,OAAA","file":"editor-style.css","sourcesContent":["//@import \"main\";\n\nbody {\n  margin: 12px !important;\n}\n"],"sourceRoot":"assets/styles/"}
