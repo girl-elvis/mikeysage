@@ -7,9 +7,9 @@
 
 
 <?php if (!has_post_format( 'video')){  
-        echo '<div class="project-meta col-sm-6" >';
-        get_template_part('templates/carousel'); 
-        echo '</div> <div class="entry-conten col-sm-6">';
+        echo '<div class="project-meta" >';
+        echo do_shortcode ('[gallery royalslider="2"]');
+        echo '</div> <div class="entry-conten">';
 
       } else {
         echo '<div >';
@@ -21,7 +21,7 @@
     </div>
     
 
-    <div class="related col-sm-6"> 
+    <div class="related"> 
           <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
     </footer>

@@ -32,7 +32,7 @@ function setup() {
   add_theme_support('post-thumbnails');
   
   set_post_thumbnail_size( 250, 160, true );
-add_image_size( 'slide', 450, 318, false ); // 
+add_image_size( 'slide', 900, 636, false ); // 
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
