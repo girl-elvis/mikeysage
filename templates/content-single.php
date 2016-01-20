@@ -21,7 +21,7 @@
     </div>
     
 
-    <div class="related col-sm-6"> <h2>More Projects here</h2>
+    <div class="related col-sm-6"> 
           <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
     </footer>
