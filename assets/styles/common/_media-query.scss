@@ -16,10 +16,16 @@
 		 .navbar-nav{
 			float: right;
 		}
+		// #new-royalslider-2 {
+		// 	max-width: 713px;
+		// }
  	}
  	
 	/* Medium Devices, Desktops */
 	@media only screen and (min-width : 992px){ 
+		.navbar-default .navbar-brand{
+			font-size: 45px;
+		}
 		.container-fluid {max-width: 940px;}
 		.navbar-header {    
 			//max-width: 50%;

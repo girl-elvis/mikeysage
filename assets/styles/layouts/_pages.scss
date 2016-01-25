@@ -9,8 +9,7 @@
 
  // Homepage Layout and category menu thing
  .home .page-header {
- 	margin: 0;
- 	h1{margin-bottom: 0;}
+ 	display: none;
  }
  
 .intro {    padding: 0 $half-gutter;

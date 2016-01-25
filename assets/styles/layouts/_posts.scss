@@ -23,6 +23,7 @@
     font-size: 1.5em;
     font-weight: 400;
     text-align: center;
+    font-family: 'Comfortaa';
 	}
 	h2 {
      padding: $half-gutter;
@@ -80,7 +81,11 @@ background: rgba(0, 0, 0, 0.2) none repeat scroll 0% 0%;
 
 
 // Single Post
-
+#new-royalslider-2 {
+    // margin: 0 auto;
+    // overflow: hidden;
+    // max-width: 713px;
+}
 
 
 //.entry-thumb 

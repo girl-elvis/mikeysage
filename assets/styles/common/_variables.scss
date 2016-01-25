@@ -2,9 +2,10 @@
 $icon-font-path:        "../fonts/";
 
 // FONTS
-
+@import url(https://fonts.googleapis.com/css?family=Comfortaa);
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great&text=DrMikeyTomkins);
 @mixin font-helv() {
-	font-family: 'Helvetica Neue', Helvetica,'liberation_sansregular', Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	// font-kerning: normal;
 }
